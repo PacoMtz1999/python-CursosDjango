@@ -1,0 +1,27 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}Registra un curso{%endblock%}
+
+{%block contenido%}
+<div class="container">
+    <form action="{% url 'formRegistroCurso'%}" method="POST" role="form">
+        {%csrf_token%}
+        <h1 class="display-4">Registra un nuevo curso</h1>
+        <p style="text-align: justify;">Ingresa la información correspondiente para registrar un nuevo curso.</p>
+        <!--Form-->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu nombre" name="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción del curso</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" placeholder="Ingresa una descripción breve sobre el curso como lo puede ser en que consta, lo que se verá a lo largo del mismo y el maestro(a) que lo impartirá."></textarea>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Enviar">
+        </div>
+        <!--End form-->
+    </form>
+</div>
+{%endblock%}
+

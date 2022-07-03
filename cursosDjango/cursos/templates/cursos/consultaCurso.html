@@ -1,0 +1,25 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}Consultar Curso{%endblock%}
+
+{%block contenido%}
+<div class="container">
+    {% for curso in cursos %}
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{curso.nombre}}</h5>
+                    <p class="card-text">{{curso.mensaje}}</p>
+                    <a href="{%url 'ConsultaIndividual' curso.id%}" class="btn btn-warning">Editar</a>
+                    <a href="{%url 'eliminarCurso' curso.id%}" class="btn btn-danger">Eliminar</a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Fecha de creación: {{curso.created}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{%endblock%}
