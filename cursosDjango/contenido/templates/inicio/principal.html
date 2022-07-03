@@ -1,0 +1,15 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}Principal{%endblock%}
+
+{% block imagen%}
+	{%load static%}
+	{%static 'contenido/images/cursosDjango02.png'%}
+{% endblock%}
+
+{%block contenido%}
+<div class="container">
+    <h1 class="display-4">Bienvenidos a la página de cursos Django</h1>
+    <p style="text-align: justify;">El objetivo del portal es la difusión de los cursos disponibles en algunas áreas del framework Django como lo son las bases de datos, la programación como tal de Python y el desarrollo de apps para el sistema operativo iOS, con el fin de atraer a posibles estudiantes que quieran aprender a programar en Python o adquirir nuevos conocimientos sobre el lenguaje y el framework.</p>
+</div>
+{%endblock%}

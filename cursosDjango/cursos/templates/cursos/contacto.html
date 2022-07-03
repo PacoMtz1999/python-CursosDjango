@@ -1,0 +1,42 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}Contacto{%endblock%}
+
+{%block contenido%}
+<div class="container">
+    <form action="{% url 'Registrar'%}" method="POST" role="form">
+        {%csrf_token%}
+        <h1 class="display-4">Contactanos</h1>
+        <p style="text-align: justify;">Solicita información sobre algún curso que te interese.</p>
+        <!--Form-->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu nombre" name="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1"
+                placeholder="Ingresa tu correo electrónico" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Curso</label>
+            <input type="tel" class="form-control" id="exampleFormControlInput1"
+                placeholder="Ingresa él (los) nombre(s) del curso(s) que te intereso" name="curso">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="exampleFormControlInput1"
+                placeholder="Ingresa tu numero de teléfono" name="telefono">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Enviar">
+        </div>
+        <!--End form-->
+    </form>
+</div>
+
+{%endblock%}

@@ -1,0 +1,27 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}Edita un curso{%endblock%}
+
+{%block contenido%}
+<div class="container">
+    <form action="{%url 'Editar' curso.id%}" method="POST" role="form">
+        {%csrf_token%}
+        <h1 class="display-4">Edita un curso</h1>
+        <p style="text-align: justify;">Modifica la información del curso que seleccionaste.</p>
+        <!--Form-->
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu nombre" name="nombre" value="{{curso.nombre}}">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción del curso</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje">{{curso.mensaje}}</textarea>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Enviar">
+        </div>
+        <!--End form-->
+    </form>
+</div>
+{%endblock%}
+

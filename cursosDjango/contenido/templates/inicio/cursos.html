@@ -1,0 +1,49 @@
+{%extends "inicio/encabezado.html"%}
+
+{%block titulo%}Cursos{%endblock%}
+
+
+{%block contenido%}
+<div class="container">
+    <h1 class="display-4">Cursos disponibles</h1>
+
+    <!--Card group-->
+    <div class="card mb-3">
+        {%load static%}
+        <img src="{%static 'contenido/images/baseDatos.jpg'%}" class="card-img-top rounded mx-auto d-block pt-3"
+            alt="..." style="width: 45%;">
+        <div class="card-body">
+            <h5 class="card-title">Base de datos</h5>
+            <p class="card-text" style="text-align: justify;">En el curso de base de datos aprenderás todo lo
+                relacionado con las mismas desde lo más
+                elemental hasta convertirte en un administrador profesional de base de datos, el curso es impartido por
+                el maestro Julio.</p>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <img src="{%static 'contenido/images/programacion.jpg'%}" class="card-img-top rounded mx-auto d-block pt-3"
+            alt="..." style="width: 45%;">
+        <div class="card-body">
+            <h5 class="card-title">Programación</h5>
+            <p class="card-text" style="text-align: justify;">En el curso de programación aprenderás primero
+                pseudocódigo, lógica de programación,
+                matemáticas para la toma de decisiones y crearás tu primer programa en el lenguaje de programación
+                Python, el curso es impartido por la maestra Elena.</p>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <img src="{%static 'contenido/images/appleDevelopment.jpg'%}" class="card-img-top rounded mx-auto d-block pt-3"
+            alt="..." style="width: 45%;">
+        <div class="card-body">
+            <h5 class="card-title">Desarrollo de aplicaciones para iOS</h5>
+            <p class="card-text" style="text-align: justify;">En el curso
+                de Desarrollo de aplicaciones para iOS aprenderás todo lo relaciona con el
+                sistema operativo de Apple para sus dispositivos móviles (iPad e iPhone) y desarrollarás tu primera
+                aplicación para iOS usando Xcode y el lenguaje de  programación Swift, el curso es impartido por la
+                maestra Paulina.</p>
+        </div>
+    </div>
+    <!--End card group-->
+</div>
+
+{%endblock%}
